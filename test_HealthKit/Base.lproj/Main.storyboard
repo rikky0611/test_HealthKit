@@ -16,7 +16,24 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCM-Nu-9oG">
+                                <rect key="frame" x="275" y="275" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="KdA-gy-ry8"/>
+                                    <constraint firstAttribute="height" constant="50" id="ele-fk-2AN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="readHealthData" destination="BYZ-38-t0r" eventType="touchUpInside" id="lP1-4n-0dS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uCM-Nu-9oG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MAm-e3-tbv"/>
+                            <constraint firstItem="uCM-Nu-9oG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U2F-sU-fbv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

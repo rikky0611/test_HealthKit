@@ -14,6 +14,7 @@
 		9AD81C7F1D8CD2CE008534FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AD81C7D1D8CD2CE008534FA /* LaunchScreen.storyboard */; };
 		9AD81C8A1D8CD2CE008534FA /* test_HealthKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD81C891D8CD2CE008534FA /* test_HealthKitTests.swift */; };
 		9AD81C951D8CD2CE008534FA /* test_HealthKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD81C941D8CD2CE008534FA /* test_HealthKitUITests.swift */; };
+		9AD81CA31D8CD71E008534FA /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD81CA21D8CD71E008534FA /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		9AD81C901D8CD2CE008534FA /* test_HealthKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test_HealthKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD81C941D8CD2CE008534FA /* test_HealthKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_HealthKitUITests.swift; sourceTree = "<group>"; };
 		9AD81C961D8CD2CE008534FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AD81CA21D8CD71E008534FA /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		9AD81CA41D8CD71E008534FA /* test_HealthKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test_HealthKit.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD81CA31D8CD71E008534FA /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +81,7 @@
 		9AD81C681D8CD2CE008534FA = {
 			isa = PBXGroup;
 			children = (
+				9AD81CA21D8CD71E008534FA /* HealthKit.framework */,
 				9AD81C731D8CD2CE008534FA /* test_HealthKit */,
 				9AD81C881D8CD2CE008534FA /* test_HealthKitTests */,
 				9AD81C931D8CD2CE008534FA /* test_HealthKitUITests */,
@@ -97,6 +102,7 @@
 		9AD81C731D8CD2CE008534FA /* test_HealthKit */ = {
 			isa = PBXGroup;
 			children = (
+				9AD81CA41D8CD71E008534FA /* test_HealthKit.entitlements */,
 				9AD81C741D8CD2CE008534FA /* AppDelegate.swift */,
 				9AD81C761D8CD2CE008534FA /* ViewController.swift */,
 				9AD81C781D8CD2CE008534FA /* Main.storyboard */,
@@ -193,6 +199,12 @@
 				TargetAttributes = {
 					9AD81C701D8CD2CE008534FA = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = CWP9ZU9T8Z;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					9AD81C841D8CD2CE008534FA = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -399,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = test_HealthKit/test_HealthKit.entitlements;
 				INFOPLIST_FILE = test_HealthKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rikky0611.test-HealthKit";
@@ -410,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = test_HealthKit/test_HealthKit.entitlements;
 				INFOPLIST_FILE = test_HealthKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rikky0611.test-HealthKit";
